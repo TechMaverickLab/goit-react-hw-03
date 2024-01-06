@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import ContactForm from './components/ContactForm';
-import SearchBar from './components/SearchBar';
-import ContactList from './components/ContactList';
+import ContactForm from './components/ContactForm/ContactForm';
+import SearchBar from './components/SearchBar/SearchBar';
+import ContactList from './components/ContactList/ContactList';
+
 
 const App = () => {
   const [contacts, setContacts] = useState(() => JSON.parse(window.localStorage.getItem('contacts')) ?? []);
