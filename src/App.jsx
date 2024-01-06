@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ContactForm from './components/ContactForm';
 import SearchBar from './components/SearchBar';
 import ContactList from './components/ContactList';
