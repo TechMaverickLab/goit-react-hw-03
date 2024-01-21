@@ -5,10 +5,14 @@ import { nanoid } from 'nanoid';
 import styles from './ContactForm.module.css';
 
 // Валідаційна схема за допомогою Yup
+/* eslint-disable no-invalid-regexp */
+const nameRegex = new RegExp("^[\\p{L}\\p{N}-_' ]+$", "u");
+/* eslint-enable no-invalid-regexp */
 const validationSchema = Yup.object({
   name: Yup.string()
     .required('Required')
-    .min(3, 'Name must be at least 3 characters'),
+    .min(3, 'Name must be at least 3 characters')
+    .matches(nameRegex, 'Invalid characters in name'),
   number: Yup.string()
     .required('Required')
     .matches(/^[0-9]+$/, 'Invalid phone number')
