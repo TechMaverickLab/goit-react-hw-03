@@ -9,13 +9,16 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "start": "vite"
   },
   "dependencies": {
     "formik": "^2.4.5",
+    "libphonenumber-js": "^1.10.53",
     "nanoid": "^5.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-phone-number-input": "^3.3.9",
     "yup": "^1.3.3"
   },
   "devDependencies": {
@@ -29,5 +32,8 @@
     "gh-pages": "^6.1.1",
     "vite": "^5.0.8"
   },
-  "homepage": "https://TechMaverickLab.github.io/goit-react-hw-03/"
+  "homepage": "https://TechMaverickLab.github.io/goit-react-hw-03/",
+  "engines": {
+    "node": "18.x"
+  }
 }

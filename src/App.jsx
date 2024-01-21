@@ -35,11 +35,15 @@ const App = () => {
     );
   };
 
+  const handleReset = () => {
+    setFilter('');
+  };
+  
   return (
     <div>
       <h1>Phonebook</h1>
       <ContactForm onSubmit={addContact} />
-      <SearchBar value={filter} onChange={changeFilter} />
+      <SearchBar value={filter} onChange={changeFilter} onReset={handleReset} />
       <ContactList contacts={getVisibleContacts()} onDeleteContact={deleteContact} />
     </div>
   );

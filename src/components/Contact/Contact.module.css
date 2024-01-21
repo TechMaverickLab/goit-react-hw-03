@@ -5,13 +5,22 @@
   padding: 5px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
-.text {
-  margin: 0;
+.contactInfo {
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start;
+  flex-direction: column;
+}
+
+.textRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.textRow svg {
+  margin-right: 10px;
 }
 
 .button {
